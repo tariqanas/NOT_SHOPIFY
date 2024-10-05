@@ -1,4 +1,4 @@
-package com.notshopify.order_service.order_service;
+package com.notshopify.inventory_service;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
@@ -12,7 +12,7 @@ class TestcontainersConfiguration {
 	@Bean
 	@ServiceConnection
 	MySQLContainer<?> mysqlContainer() {
-		return new MySQLContainer<>(DockerImageName.parse("mysql:8.3.0"));
+		return new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
 	}
 
 }
